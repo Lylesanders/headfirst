@@ -14,7 +14,7 @@ target = rand(100)+1 #random number generated between 0-99 add 1 to change from 
 num_guesses = 0 # variable used to count guesses for control loop
 guessed_it = false
 
-while num_guesses <10 && guessed_it == false
+until num_guesses ==10 || guessed_it
     puts "You have #{10 - num_guesses} guesses left"
 
     print "Take a guess: "
