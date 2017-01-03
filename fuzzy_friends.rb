@@ -1,29 +1,39 @@
-def talk(animal_type,name)
-    if animal_type == "bird"
-        puts "#{name} says Chirp! Chirp!"
-    elsif animal_type =="dog"
-        puts "#{name} says Bark!"
-    elsif animal type =="cat"
-        puts "#{name} says Meow!"
+class Dog
+    def talk
+        puts "Bark"
+    end
+
+    def move(destination)
+        puts "Running to the #{destination}."
+    end
+
+end 
+
+class Bird
+    def talk
+        puts "Chirp"
+    end
+
+    def move(destination)
+        puts "Flying to the #{destination}"
     end
 end
 
-def move(animal_type, name, destination)
-    if animal_type == "bird"
-        puts "#{name} flies to the #{destination}."
-    elsif animal_type == "dog"
-        puts "#{name} runs to the #{destination}."
-    elsif animal_type == "cat"
-        puts "#{name} runs to the #{destination}."
+class Cat
+
+    def talk
+        puts "Meow"
+    end
+
+    def move(destination)
+        puts "Running to the #{destination}."
     end
 end
+    bird = Bird.new
+    dog = Dog.new
+    cat = Cat.new
 
-def report_age(name, age)
-    puts "#{name} is #{age} years old."
-end
-
-move("bird", "Whistler", "tree") 
-talk("dog", "Sadie")
-talk("bird", "Whistler")
-move("cat", "Smudge", "house")
-report_age("Smudge", 6)
+    bird.move("tree")
+    dog.talk
+    bird.talk
+    cat.move("house")
